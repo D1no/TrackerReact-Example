@@ -1,6 +1,6 @@
 // Vanilla React from npm. Check package.json for more details
 import React from 'react';
-import ReactMixin from 'react-mixin';
+//import ReactMixin from 'react-mixin';
 import ReactDOM from 'react-dom';
 
 // TrackerReact is importated with new module system
@@ -21,7 +21,7 @@ class Task extends React.Component {
 }
 
 // Main To-Do List
-class Main extends React.Component {
+class Main extends TrackerReact(React.Component){
 
   // Don't need subscription etc. because auto-publish and insecure are included
   tasks() {
@@ -42,7 +42,7 @@ class Main extends React.Component {
   }
 }
 // Using ReactMixin because ES7 decorators are not available in meteor, ecmascript
-ReactMixin(Main.prototype, TrackerReact);
+// ReactMixin(Main.prototype, TrackerReactMixin);
 
 // Render to HTML
 Meteor.startup(function(){

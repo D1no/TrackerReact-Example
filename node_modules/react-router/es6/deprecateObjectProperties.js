@@ -2,7 +2,7 @@
 'use strict';
 
 export default deprecateObjectProperties;
-import warning from './warning';
+import warning from './routerWarning';
 
 var useMembrane = false;
 

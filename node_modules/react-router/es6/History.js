@@ -1,6 +1,6 @@
 'use strict';
 
-import warning from './warning';
+import warning from './routerWarning';
 import { history } from './PropTypes';
 
 /**

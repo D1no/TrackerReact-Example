@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import warning from './warning';
+import warning from './routerWarning';
 import invariant from 'invariant';
 import Redirect from './Redirect';
 import { falsy } from './PropTypes';

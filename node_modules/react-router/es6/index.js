@@ -51,5 +51,3 @@ import _hashHistory from './hashHistory';
 export { _hashHistory as hashHistory };
 import _createMemoryHistory from './createMemoryHistory';
 export { _createMemoryHistory as createMemoryHistory };
-import _default from './Router';
-export { _default as default };

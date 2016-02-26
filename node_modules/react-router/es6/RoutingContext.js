@@ -2,7 +2,7 @@
 
 import React from 'react';
 import RouterContext from './RouterContext';
-import warning from './warning';
+import warning from './routerWarning';
 
 var RoutingContext = React.createClass({
   displayName: 'RoutingContext',

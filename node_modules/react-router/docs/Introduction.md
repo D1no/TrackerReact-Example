@@ -159,7 +159,7 @@ const routes = {
   ]
 }
 
-render(<Router routes={routes} />, document.body)
+render(<Router history={history} routes={routes} />, document.body)
 ```
 
 ## Adding More UI
@@ -187,7 +187,7 @@ const Inbox = React.createClass({
 })
 
 render((
-  <Router>
+  <Router history={history}>
     <Route path="/" component={App}>
       <IndexRoute component={Home} />
       <Route path="about" component={About} />
@@ -245,7 +245,7 @@ const Message = React.createClass({
 })
 ```
 
-You can also access parameters from the query string. If you for instance visit `/foo?bar=baz`, you can access `this.props.location.query.bar` to get the value `"baz"` from your Route component.
+You can also access parameters from the query string. For instance, if you're on `/foo?bar=baz`, you can access `this.props.location.query.bar` to get the value `"baz"` from your Route component.
 
 That's the gist of React Router. Application UIs are boxes inside of boxes inside of boxes; now you can keep those boxes in sync with the URL and link to them easily.
 

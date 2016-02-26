@@ -1,6 +1,6 @@
 'use strict';
 
-import warning from './warning';
+import warning from './routerWarning';
 import React from 'react';
 
 var object = React.PropTypes.object;

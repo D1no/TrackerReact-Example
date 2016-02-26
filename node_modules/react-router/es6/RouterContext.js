@@ -8,7 +8,7 @@ import React from 'react';
 import deprecateObjectProperties from './deprecateObjectProperties';
 import getRouteParams from './getRouteParams';
 import { isReactChildren } from './RouteUtils';
-import warning from './warning';
+import warning from './routerWarning';
 
 var _React$PropTypes = React.PropTypes;
 var array = _React$PropTypes.array;

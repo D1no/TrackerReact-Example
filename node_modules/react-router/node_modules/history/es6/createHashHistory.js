@@ -5,11 +5,11 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 import warning from 'warning';
 import invariant from 'invariant';
 import { PUSH, POP } from './Actions';
+import { parsePath } from './PathUtils';
 import { canUseDOM } from './ExecutionEnvironment';
 import { addEventListener, removeEventListener, getHashPath, replaceHashPath, supportsGoWithoutReloadUsingHash } from './DOMUtils';
 import { saveState, readState } from './DOMStateStorage';
 import createDOMHistory from './createDOMHistory';
-import parsePath from './parsePath';
 
 function isAbsolutePath(path) {
   return typeof path === 'string' && path.charAt(0) === '/';
