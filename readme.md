@@ -6,6 +6,8 @@ An implementation example of React with Meteor 1.3
 * `npm install`
 * `meteor`
 
+**Read the source file & comments**: [client/main.jsx](https://github.com/D1no/TrackerReact-Example/blob/master/client/main.jsx)
+
 *Note*: The source code is thoroughly annotated to showcase the benefit of [TrackerReact](https://github.com/ultimatejs/tracker-react). Please go through the code
  to 
 identify implementation patterns and - in case of mistakes or areas of improvement - provide your feedback.
