@@ -1,4 +1,4 @@
-## TrackerReact Implementation Example
+## [TrackerReact](https://github.com/ultimatejs/tracker-react) Implementation Example
 "No-Config reactive React Components with Meteor"
 
 An implementation example of React with Meteor 1.3
@@ -6,8 +6,7 @@ An implementation example of React with Meteor 1.3
 * `npm install`
 * `meteor`
 
-*Note*: The source code is thoroughly annotated to showcase the benefit of [TrackerReact](https://github
-.com/ultimatejs/tracker-react). Please go through the code
+*Note*: The source code is thoroughly annotated to showcase the benefit of [TrackerReact](https://github.com/ultimatejs/tracker-react). Please go through the code
  to 
 identify implementation patterns and - in case of mistakes or areas of improvement - provide your feedback.
 
