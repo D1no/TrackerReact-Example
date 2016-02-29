@@ -20,5 +20,8 @@ Meteor Package
 meteor add ultimatejs:tracker-react
 ```
 
+![image](https://cloud.githubusercontent.com/assets/2397125/13386506/8584344e-dead-11e5-96fd-dfdda666cf39.png)
+
+
 ## License
 MIT
