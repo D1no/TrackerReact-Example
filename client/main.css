@@ -2,6 +2,56 @@ body {
 	padding: 0;
 	margin: 0;
 	background: #3498db;
-	font-family: 'Lato', sans-serif !important;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif  !important;;
+	font-weight: 400;
 	font-size: 14px;
+}
+
+.container {
+	padding: 40px 0
+}
+
+.wrapper {
+	max-width: 600px;
+	margin: 10px auto;
+	display: flex
+}
+
+.left {
+	width: 50%;
+	float: left;
+	padding-right: 10px
+}
+
+.right {
+	width: 50%;
+	float: left;
+	padding-left: 10px
+}
+
+.intro {
+	display: inline-block;
+}
+
+div.thermometer > div > div:nth-child(1) > div {
+	transition-duration: 1s;
+}
+
+@media (max-width: 650px) {
+	body {
+		padding: 0 20px 0 20px;
+	}
+	.wrapper {
+		display: block;
+	}
+	.left {
+		float: none;
+		width: 100%;
+		padding: 0;
+	}
+	.right {
+		float: none;
+		width: 100%;
+		padding: 0;
+	}
 }

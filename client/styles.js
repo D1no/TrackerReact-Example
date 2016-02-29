@@ -1,25 +1,55 @@
 export default style = {
-  container: {
-    padding: "65px 0"
-  },
   heading: {
     fontStyle: "italic",
     fontSize: "30px",
     textAlign: "center",
     color: "#fff",
-    marginBottom: "38px"
+    marginBottom: "40px"
+  },
+  subHeading: {
+    fontSize: "14px",
+    fontWeight: "normal",
+    textAlign: "center",
+    color: "#fff",
+    padding: "0 20%",
+    marginBottom: "10px"
+  },
+  install: {
+    textAlign: "center",
+    marginBottom: "20px",
+    color: "white",
+    repo: {
+      fontVariant: "normal",
+      fontStyle: "normal",
+      textDecoration: "none",
+      color: "white"
+    },
+    bash: {
+      backgroundColor: "#58A6DB",
+      display: "inline",
+      padding: "8px 15px",
+      borderRadius: "5px",
+      fontFamily: "monospace",
+      border: "solid 1px #2096CD",
+      whiteSpace: "nowrap",
+      lineHeight: "45px"
+    }
   },
   content: {
-    maxWidth: "600px",
-    margin: "10px auto",
     background: "#fff",
     padding: "35px 20px 25px 20px",
-    display: "flex"
+    heading: {
+      color: "#565656",
+      margin: "0 0 1rem 0"
+    },
+    intro: {
+      marginBottom: "1rem",
+      color: "#747474",
+      lineHeight: "1.2rem",
+      textAlign: "justify"
+    }
   },
   method: {
-    width: "50%",
-    float: "left",
-    paddingRight: "10px",
     thermometer: {
       padding: "20px 0 20px 50px",
       float: "left"
@@ -40,9 +70,6 @@ export default style = {
     }
   },
   collection: {
-    width: "50%",
-    float: "left",
-    paddingLeft: "10px",
     olList: {
       paddingLeft: "40px",
       maxHeight: "380px",
@@ -65,7 +92,12 @@ export default style = {
     outline: "none",
     cursor: "pointer",
     marginRight: "20px",
-    marginBottom: "1rem"
+    marginBottom: "1rem",
+    last: function() {
+      let last = Object.assign({}, this);
+      last.marginRight = "none";
+      return last;
+    }
   },
   todo: {
     listStyleType: "decimal",
