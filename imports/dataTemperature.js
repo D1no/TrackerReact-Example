@@ -24,6 +24,7 @@ Meteor.methods({
   addMeasure (reading = 10, delay = 3) {
 
     delay = delay > 0 ? delay : 3;
+    reading = reading <= 30 ? reading : 30;
 
     let measure = {
       current: reading,
@@ -56,7 +57,8 @@ Meteor.methods({
 
       if (typeof reading === "undefined") return;
 
-      amount = Number(reading.current) + Number(amount);
+      const newTemp = Number(reading.current) + Number(amount);
+      amount = newTemp <= 30 ? newTemp : 30;
 
       /*
       Based of the original document _id, the record is updated and re-propagated across all clients.

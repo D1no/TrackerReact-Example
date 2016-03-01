@@ -267,7 +267,7 @@ class MethodShowcase extends TrackerReact(React.Component) {
     let reading = this.refs["reading"].value;
     let delay = this.refs["delay"].value;
 
-    if (reading >= 0 || reading >= 30) {
+    if (reading >= 0 && reading <= 30) {
       Meteor.call("addMeasure", reading, delay);
     }
   }
@@ -315,4 +315,3 @@ class MethodShowcase extends TrackerReact(React.Component) {
     )
   }
 }
-
