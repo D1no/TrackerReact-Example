@@ -243,10 +243,13 @@ import "/imports/dataTemperature";
 import Thermometer from "react-thermometer";
 
 /* Meteor, React -> TrackerReact
- Same as before. Real-time data-invalidation due to optimistic updates.
- -> "TrackerReact(React.Component)"
+ Here the mixin method is used (scroll to the end of the file). Real-time data-invalidation due to optimistic updates.
+ -> "ReactMixin(MethodShowcase.prototype, TrackerReactMixin);"
  */
-class MethodShowcase extends TrackerReact(React.Component) {
+import ReactMixin from 'react-mixin';
+import {TrackerReactMixin} from 'meteor/ultimatejs:tracker-react';
+
+class MethodShowcase extends React.Component {
 
   /* Meteor, React
    Same reasoning as before. See above [CollectionShowcase].
@@ -344,4 +347,4 @@ class MethodShowcase extends TrackerReact(React.Component) {
     )
   }
 }
-
+ReactMixin(MethodShowcase.prototype, TrackerReactMixin);
