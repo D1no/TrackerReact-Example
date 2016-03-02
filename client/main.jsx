@@ -351,3 +351,5 @@ class MethodShowcase extends React.Component {
     )
   }
 }
+
+ReactMixin(MethodShowcase.prototype, TrackerReactMixin);
