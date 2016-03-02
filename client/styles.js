@@ -97,6 +97,11 @@ export default style = {
       let last = Object.assign({}, this);
       last.marginRight = "none";
       return last;
+    },
+    inverted: function() {
+      let last = Object.assign({}, this);
+      last.background = "#58A6DB";
+      return last;
     }
   },
   todo: {

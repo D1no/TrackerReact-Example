@@ -37,6 +37,22 @@ class Main extends React.Component {
     )
   }
 
+  constructor() {
+    super();
+    this.state = {
+      showCollectionShowcase: true,
+      showMethodShowcase: true
+    };
+  }
+
+  showMethodShowcase() {
+    this.setState({showMethodShowcase: !this.state.showMethodShowcase});
+  }
+
+  showCollectionShowcase() {
+    this.setState({showCollectionShowcase: !this.state.showCollectionShowcase});
+  }
+
   render() {
     return (
       <div className="container">
@@ -46,8 +62,16 @@ class Main extends React.Component {
           "https://github.com/ultimatejs/tracker-react",
           "meteor add ultimatejs:tracker-react")}
         <div className="wrapper" style={style.content}>
-          <MethodShowcase />
-          <CollectionShowcase />
+          {this.state.showMethodShowcase ? <MethodShowcase /> : null}
+          {this.state.showCollectionShowcase ? <CollectionShowcase /> : null}
+        </div>
+        <div className="footer">
+          <button style={style.button.inverted()} onClick={this.showMethodShowcase.bind(this)} type="button">
+            {this.state.showMethodShowcase ? "Unmount" : "Mount"} Method Showcase
+          </button>
+          <button style={style.button.inverted()} onClick={this.showCollectionShowcase.bind(this)} type="button">
+            {this.state.showCollectionShowcase ? "Unmount" : "Mount"} Collection Showcase
+          </button>
         </div>
       </div>
     )
@@ -88,7 +112,7 @@ Tasks = new Mongo.Collection("tasks");
  TrackerReact. If we would not do so, everything would still work fine but updates are only shown on page/component
  re-load. -> "TrackerReact(React.Component)"
  */
-class CollectionShowcase extends TrackerReact(React.Component) {
+class CollectionShowcase extends TrackerReact(React.Component, {profiler: true}) {
 
   /* Meteor, React
    In this example, the Meteor data is only used inside this react component. Therefore, no active data subscription

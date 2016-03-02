@@ -17,6 +17,10 @@ body {
 	display: flex
 }
 
+.footer {
+	text-align: center;
+}
+
 .left {
 	width: 50%;
 	float: left;
