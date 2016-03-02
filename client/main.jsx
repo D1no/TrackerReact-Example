@@ -111,6 +111,8 @@ Tasks = new Mongo.Collection("tasks");
  In order to have react re-render on data invalidation and update our component, we need to compose it with
  TrackerReact. If we would not do so, everything would still work fine but updates are only shown on page/component
  re-load. -> "TrackerReact(React.Component)"
+
+ Profiler: Set {profiler: false} to turn profile logs off. If not used, this second argument can be omitted.
  */
 class CollectionShowcase extends TrackerReact(React.Component, {profiler: true}) {
 
@@ -256,6 +258,8 @@ class MethodShowcase extends React.Component {
    */
   constructor() {
     super();
+    // Set {profiler: true} to get profile logs
+    this._profMode = {profiler: false};
     this.state = {
       subscription: {
         temperature: Meteor.subscribe('temperature')
