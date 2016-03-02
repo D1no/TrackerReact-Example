@@ -137,6 +137,7 @@ class CollectionShowcase extends TrackerReact(React.Component, {profiler: true})
   /* Meteor, React
    Since we are not planning to use this data anywhere else, we will stop the subscription when the component unmounts.
    */
+  //noinspection JSUnusedGlobalSymbols
   componentWillUnmount() {
     this.state.subscription.tasks.stop();
   }
@@ -160,6 +161,7 @@ class CollectionShowcase extends TrackerReact(React.Component, {profiler: true})
    An object array is simply returned from our collection. With TrackerReact, any changes to the underlying will lead
    to an automatic component re-render with a new return value -> virtual dom diffing -> dom update.
    */
+  //noinspection JSMethodCanBeStatic
   tasks() {
     return Tasks.find().fetch().reverse();
   }
@@ -261,6 +263,7 @@ class MethodShowcase extends TrackerReact(React.Component) {
   /* Meteor, React
    Same reasoning as before. See above [CollectionShowcase].
    */
+  //noinspection JSUnusedGlobalSymbols
   componentWillUnmount() {
     this.state.subscription.temperature.stop();
   }
@@ -270,6 +273,7 @@ class MethodShowcase extends TrackerReact(React.Component) {
    loading stub for when the data is not loaded yet. With TrackerReact, loading indicators can be implicit to data
    availability and is not limited to whole subscriptions.
    */
+  //noinspection JSMethodCanBeStatic
   temperature() {
     return Temperature.findOne({}, {sort: {created: -1}}) || {current: 0, source: "loading"};
   }
@@ -302,6 +306,7 @@ class MethodShowcase extends TrackerReact(React.Component) {
 
    See "/server/dataPublications.js".
    */
+  //noinspection JSMethodCanBeStatic
   changeTemperature(amount) {
     Meteor.call("changeMeasure", amount);
   }
