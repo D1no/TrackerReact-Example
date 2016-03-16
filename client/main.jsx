@@ -114,7 +114,7 @@ Tasks = new Mongo.Collection("tasks");
 
  Profiler: Set {profiler: false} to turn profile logs off. If not used, this second argument can be omitted.
  */
-class CollectionShowcase extends TrackerReact(React.Component, {profiler: true}) {
+class CollectionShowcase extends TrackerReact(React.Component) {
 
   /* Meteor, React
    In this example, the Meteor data is only used inside this react component. Therefore, no active data subscription
@@ -258,8 +258,7 @@ class MethodShowcase extends React.Component {
    */
   constructor() {
     super();
-    // Set {profiler: true} to get profile logs
-    this._profMode = {profiler: false};
+
     this.state = {
       subscription: {
         temperature: Meteor.subscribe('temperature')
